@@ -1,0 +1,15 @@
+web:
+ image: wordpress
+ links:
+  - mysql
+ environment:
+  - WORDPRESS_DB_PASSWORD=password
+ ports:
+  - "127.0.0.1:8080:80"
+ volumes:
+  - ../src/:/var/www/html/wp-content/plugins/moneypls-wp
+mysql:
+ image: mysql:5.7
+ environment:
+  - MYSQL_ROOT_PASSWORD=password
+  - MYSQL_DATABASE=my-wpdb
