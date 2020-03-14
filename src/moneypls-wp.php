@@ -8,7 +8,7 @@ Description: Request donations nicely
 
 Author: Gived.Org
 
-Version: 1.1
+Version: 1.0
 
 Author URI: https://gived.org
 
