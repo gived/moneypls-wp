@@ -20,19 +20,19 @@ require_once(plugin_dir_path(__FILE__) . 'functions.php');
 
 add_action('admin_menu', 'admin_menu_moneypls');
 
-add_action('admin_init', 'ishf_registerSettings');
+add_action('admin_init', 'mpls_registerSettings');
 
 
-add_action('wp_head', 'ishf_frontendHeaderScript');
+add_action('wp_head', 'mpls_frontendHeaderScript');
 
-register_activation_hook(__FILE__, 'ishf_plugin_active_header_footer_script');
+register_activation_hook(__FILE__, 'mpls_plugin_active_header_footer_script');
 
 
 
-function ishf_plugin_active_header_footer_script()
+function mpls_plugin_active_header_footer_script()
 {
 
-	$campaign_id = ishf_get_option_campaign_id();
+	$campaign_id = mpls_get_option_campaign_id();
 
 
 	if (empty($campaign_id)) {
@@ -41,7 +41,7 @@ function ishf_plugin_active_header_footer_script()
 	}
 }
 
-function ishf_registerSettings()
+function mpls_registerSettings()
 {
 	$plugin_data = get_plugin_data(__FILE__);
 	$plugin_name = $plugin_data['Name'];
@@ -49,18 +49,18 @@ function ishf_registerSettings()
 }
 
 
-function ishf_frontendHeaderScript()
+function mpls_frontendHeaderScript()
 {
-	echo '<script async defer src="https://cdn.gived.org/gived.js" data-gived-campaign-id="' . ishf_get_option_campaign_id() . '"></script>';
+	echo '<script async defer src="https://cdn.gived.org/gived.js" data-gived-campaign-id="' . mpls_get_option_campaign_id() . '"></script>';
 }
 
 function admin_menu_moneypls()
 {
 
-	add_options_page('MoneyPls Config', 'MoneyPls Config', 'manage_options', 'insert-script-in-header-and-footer-option', 'ishf_options_menu_header_footer_script');
+	add_options_page('MoneyPls Config', 'MoneyPls Config', 'manage_options', 'insert-script-in-header-and-footer-option', 'mpls_options_menu_header_footer_script');
 }
 
-function ishf_options_menu_header_footer_script()
+function mpls_options_menu_header_footer_script()
 {
 
 	if (!current_user_can('manage_options')) {

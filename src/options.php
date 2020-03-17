@@ -2,18 +2,17 @@
 if (!defined('ABSPATH')) exit;
 if (isset($_POST['submit_option'])) {
 	$campaign_id = sanitize_text_field(htmlentities($_POST['campaign_id']));
-	$footer_script = sanitize_text_field(htmlentities($_POST['footer_script']));
 	$nonce = $_POST['insert_script_wpnonce'];
 	if (wp_verify_nonce($nonce, 'insert_script_option_nonce')) {
 		update_option('insert_campaign_id_gk', $campaign_id);
 		// update_option('insert_footer_script_gk', $footer_script);
-		$successmsg = ishf_success_option_msg_header_footer_script('Settings Saved.');
+		$successmsg = mpls_success_option_msg_header_footer_script('Settings Saved.');
 	} else {
-		$errormsg = ishf_failure_option_msg_header_footer_script('Unable to save data!');
+		$errormsg = mpls_failure_option_msg_header_footer_script('Unable to save data!');
 	}
 }
 
-$campaign_id = ishf_get_option_campaign_id();
+$campaign_id = mpls_get_option_campaign_id();
 
 
 ?>
@@ -25,7 +24,7 @@ $campaign_id = ishf_get_option_campaign_id();
 	<?php
 	if (isset($successmsg)) {
 	?>
-		<div class="ishf_updated fade">
+		<div class="mpls_updated fade">
 			<p><?php echo $successmsg; ?></p>
 		</div>
 	<?php
@@ -39,7 +38,7 @@ $campaign_id = ishf_get_option_campaign_id();
 	}
 	?>
 
-	<div class='ishf_inner'>
+	<div class='mpls_inner'>
 
 		<h4 class="heading-h4">Settings</h4>
 

@@ -1,11 +1,11 @@
 <?php  
 if( !defined( 'ABSPATH' ) ) exit;
-function ishf_get_option_campaign_id()
+function mpls_get_option_campaign_id()
 {
 	return $campaign_id=   wp_unslash(get_option('insert_campaign_id_gk'));
 }
 
-function  ishf_success_option_msg_header_footer_script($msg)
+function  mpls_success_option_msg_header_footer_script($msg)
 {
 	
 	

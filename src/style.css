@@ -1,4 +1,4 @@
-.ishf_inner{
+.mpls_inner{
 	min-width: 763px;
 	float: left;
 	background-color: #fff;
@@ -8,7 +8,7 @@
 	width:100%;
 	
 }
-.wrap .ishf_inner h4.heading-h4{
+.wrap .mpls_inner h4.heading-h4{
 	cursor:move;
 	font-size: 14px;
     margin: 0;
@@ -20,16 +20,16 @@
 	width:auto;
 	float: right;
 }
-.wrap div.ishf_updated {
+.wrap div.mpls_updated {
     margin: 5px 0 15px;
 }
-.success.ishf_updated {
+.success.mpls_updated {
     border-left-color: #46b450;
 }
-.error.ishf_updated {
+.error.mpls_updated {
     border-left-color: #000;
 }
-div.error, div.ishf_updated {
+div.error, div.mpls_updated {
     background: #fff;
     border-left: 4px solid #fff;
     box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
