@@ -54,9 +54,10 @@ After active plugin go to Setting->MoneyPls Config.
 
 
 == Screenshots ==
-1. Settings page.
+1. MoneyPls site.
 2. MoneyPls widget.
-3. MoneyPls site.
+3. MoneyPls widget payment.
+4. MoneyPls settings page.
 
 
 == Changelog ==
